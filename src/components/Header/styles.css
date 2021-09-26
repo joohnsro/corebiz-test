@@ -103,6 +103,8 @@ header {
 }
 
 .collapse {
+    display: none;
+    
     border: none;
     background-color: transparent;
 
