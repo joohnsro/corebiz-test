@@ -12,8 +12,7 @@ function SingleProduct(props) {
     const { 
         productName, 
         imageUrl, 
-        stars, 
-        listPrice, 
+        stars,
         price, 
         installments 
     } = props.data;
@@ -26,7 +25,7 @@ function SingleProduct(props) {
     }
 
     function getItemObs() {
-        if ( installments.length == 0 ) return;
+        if ( installments.length === 0 ) return;
 
         return (
             <p className="item-obs">
@@ -35,11 +34,12 @@ function SingleProduct(props) {
         );
     }
 
-    const star = (full = false) => {
+    const star = (full = false, key = 0) => {
         return (
             <FontAwesomeIcon
                 icon={faStar}
                 className={full ? "full" : ""}
+                key={key}
             />
         );
     }
@@ -49,7 +49,7 @@ function SingleProduct(props) {
 
         for( let i = 1; i <= 5; i++ ) {
             starList.push(
-                star(i <= stars)
+                star(i <= stars, i)
             );
         }
 
@@ -68,7 +68,7 @@ function SingleProduct(props) {
     return(
         <>
             <div className="item-image">
-                <img src={imageUrl} />
+                <img src={imageUrl} alt={`Imagem de ${productName}`} />
             </div>
             <div className="item-description">
                 <p className="item-name">{productName}</p>

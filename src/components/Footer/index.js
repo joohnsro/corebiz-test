@@ -33,11 +33,11 @@ function Footer() {
             <div className="logos">
                 <div>
                     <span>Created by</span>
-                    <img src="corebiz-footer.png" />
+                    <img src="corebiz-footer.png" alt="Corebiz Logo" />
                 </div>
                 <div>
                     <span>Powered by</span>
-                    <img src="vtex.png" />
+                    <img src="vtex.png" alt="Vtex Logo" />
                 </div>
             </div>
             

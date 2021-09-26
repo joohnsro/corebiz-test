@@ -39,10 +39,10 @@ function ProductsDisplay () {
             </div>
 
             <ul className="products-navigation">
-                <li><a href="#" className="active"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li key="1"><span className="active"></span></li>
+                <li key="2"><span></span></li>
+                <li key="3"><span></span></li>
+                <li key="4"><span></span></li>
             </ul>
         </section>
     );

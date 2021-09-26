@@ -22,10 +22,10 @@ function Slider () {
                 <li></li>
             </ul>
             <ul className="slider-navigation">
-                <li><a href="#" className="active"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><span className="active"></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
             </ul>
         </section>
     );

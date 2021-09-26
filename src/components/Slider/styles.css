@@ -88,7 +88,7 @@
     text-align: center;
 }
 
-.slider-navigation li a {
+.slider-navigation li span {
     width: 10px;
     height: 10px;
 
@@ -96,6 +96,8 @@
 
     border-radius: 50%;
     background-color: #BDBDBD;
+
+    cursor: pointer;
 }
 
 .slider-navigation li:not(:last-child) {
