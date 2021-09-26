@@ -100,6 +100,13 @@ function ProductsDisplay () {
             <div className="right-control">
                 <FontAwesomeIcon icon={faChevronRight} />
             </div>
+
+            <ul className="products-navigation">
+                <li><a href="#" className="active"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
         </section>
     );
 }

@@ -109,3 +109,38 @@
 .bg-image {
     width: 100%;
 }
+
+@media screen and (max-width: 1024px) {
+    .slider-container {
+        height: unset;
+    }
+
+    .slider li {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .slider li .description {
+        max-width: 100%;
+
+        padding: 40px 0 120px 0;
+
+        background-image: none !important;        
+        background-color: rgba(0, 0, 0, .5);
+    }
+    
+    .slider li .description .description-content {
+        max-width: 100%;
+        
+        box-sizing: border-box;
+        padding: 0 10%;
+    }
+
+    .slider li .description p {
+        margin: 0;
+    }
+    
+    .slider li .description h1 {
+        font-size: 40px;
+    }
+}
