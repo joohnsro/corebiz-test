@@ -98,6 +98,8 @@ header {
     font-weight: 700;
     text-align: center;
 
+    margin-left: 4px;
+
     border-radius: 50%;
     background-color: #F8475F;
 }

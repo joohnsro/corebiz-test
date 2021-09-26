@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../../CartContext";
+import { CartStorage } from "../../storage";
 
 function SingleProduct(props) {
+
+    const { cart, setCart } = useContext(CartContext);
 
     const { 
         productName, 
@@ -49,9 +53,16 @@ function SingleProduct(props) {
             );
         }
 
-        console.log(starList);
-
         return starList;
+    }
+
+    function handleAddToCart() {
+        let quantity = parseInt(cart) + 1;
+
+        try {
+            CartStorage.set( quantity );
+            setCart( quantity );            
+        } catch(e) {}
     }
 
     return(
@@ -66,7 +77,10 @@ function SingleProduct(props) {
                 </span>
                 <p className="item-price">por {getFormattedCurrency( price )}</p>
                 {getItemObs()}
-                <button className="buy-button">Comprar</button>
+                <button 
+                    className="buy-button"
+                    onClick={handleAddToCart}
+                >Comprar</button>
             </div>
         </>
     );

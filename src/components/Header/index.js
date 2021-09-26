@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faShoppingCart, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 
 import logo from './logo.svg';
 import './styles.css';
+import { CartContext } from "../../CartContext";
 
 function Header() {
+    const { cart } = useContext(CartContext);
+    
     return (
         <header>
             <img src={logo} className="corebiz-logo" alt="Corebiz Logo" />
@@ -30,7 +33,7 @@ function Header() {
 
             <button className="cart">
                 <FontAwesomeIcon icon={faShoppingCart} />
-                <span>1</span>
+                <span>{cart}</span>
             </button>     
         </header>
     )
